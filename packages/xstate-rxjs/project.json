@@ -1,0 +1,35 @@
+{
+  "root": "packages/xstate-rxjs",
+  "sourceRoot": "packages/xstate-rxjs/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/xstate-rxjs",
+        "tsConfig": "packages/xstate-rxjs/tsconfig.lib.json",
+        "packageJson": "packages/xstate-rxjs/package.json",
+        "main": "packages/xstate-rxjs/src/index.ts",
+        "assets": ["packages/xstate-rxjs/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/xstate-rxjs/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/xstate-rxjs"],
+      "options": {
+        "jestConfig": "packages/xstate-rxjs/jest.config.js",
+        "passWithNoTests": true,
+        "verbose": true
+      }
+    }
+  },
+  "tags": []
+}

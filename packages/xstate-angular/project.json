@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "packages/xstate-angular",
+  "sourceRoot": "packages/xstate-angular/src",
+  "prefix": "x",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/packages/xstate-angular"],
+      "options": {
+        "project": "packages/xstate-angular/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "packages/xstate-angular/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "packages/xstate-angular/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/xstate-angular"],
+      "options": {
+        "jestConfig": "packages/xstate-angular/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/xstate-angular/src/**/*.ts",
+          "packages/xstate-angular/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

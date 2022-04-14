@@ -1,0 +1,26 @@
+{
+  "name": "@xstate-libs/rxjs",
+  "version": "0.0.1",
+  "description": "XState tools for RxJS",
+  "keywords": [
+    "xstate",
+    "state",
+    "machine",
+    "statechart",
+    "scxml",
+    "state",
+    "graph",
+    "rxjs",
+    "observable"
+  ],
+  "author": "Alex Devillier <alex.devillier@gmail.com>",
+  "repository": "https://github.com/adevil5/xstate-libs.git",
+  "peerDependencies": {
+    "xstate": "*"
+  },
+  "peerDependenciesMeta": {
+    "xstate": {
+      "optional": true
+    }
+  }
+}
