@@ -48,16 +48,13 @@ describe('useMachine', () => {
   });
 
   test('should work with the useMachine hook (rehydrated state)', (done) => {
-    const { state$, service } = fetcher(
+    const { state$ } = fetcher(
       () => Promise.resolve('fake data'),
       persistedFetchState
     );
 
-    service; //?
-
     state$.subscribe({
       next: (state) => {
-        state; //?
         if (state.context.data === 'persisted data') {
           done();
         }

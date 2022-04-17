@@ -23,7 +23,7 @@ describe('useMachine', () => {
       services: { fetchData: () => Promise.resolve('fake data') },
     });
     xtc.addStateMachineServiceBase(stateMachineServiceBase);
-    const { state$, send, service } = stateMachineServiceBase;
+    const { state$, send } = stateMachineServiceBase;
 
     state$.subscribe({
       next: (state) => {
